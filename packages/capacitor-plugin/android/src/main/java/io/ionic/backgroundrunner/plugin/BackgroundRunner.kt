@@ -16,7 +16,6 @@ import io.ionic.android_js_engine.Runner
 import io.ionic.backgroundrunner.plugin.api.App
 import io.ionic.backgroundrunner.plugin.api.AppState
 import io.ionic.backgroundrunner.plugin.api.Device
-import io.ionic.backgroundrunner.plugin.api.Geolocation
 import io.ionic.backgroundrunner.plugin.api.KV
 import io.ionic.backgroundrunner.plugin.api.Notifications
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -187,7 +186,6 @@ class BackgroundRunner(context: android.content.Context) {
         val api = NativeCapacitorAPI()
         api.initDeviceAPI(Device(context))
         api.initKVAPI(KV(context, config.label))
-        api.initGeolocationAPI(Geolocation(context))
         api.initNotificationsAPI(Notifications(context))
         api.initAppAPI(App(context))
 

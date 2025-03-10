@@ -22,10 +22,6 @@ import com.getcapacitor.Bridge
     name = "BackgroundRunner",
     permissions = [
         Permission(
-            strings = [Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION],
-            alias = BackgroundRunnerPlugin.GEOLOCATION
-        ),
-        Permission(
             strings = [Manifest.permission.POST_NOTIFICATIONS],
             alias = BackgroundRunnerPlugin.NOTIFICATIONS
         )
@@ -36,7 +32,6 @@ class BackgroundRunnerPlugin: Plugin() {
     private var appState: AppState = AppState.getInstance()
 
     companion object {
-        const val GEOLOCATION = "geolocation"
         const val NOTIFICATIONS = "notifications"
     }
 
